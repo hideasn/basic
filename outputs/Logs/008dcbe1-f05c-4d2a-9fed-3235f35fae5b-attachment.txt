@@ -1,0 +1,28 @@
+INFO     pre_handle_utils.py:pre_handle_utils.py:59 请求前url: api/v1/app/authorization
+INFO     pre_handle_utils.py:pre_handle_utils.py:73 请求后url: https://store-ttpp.mgthai.com/api/v1/app/authorization
+INFO     pre_handle_utils.py:pre_handle_utils.py:80 处理请求前header为{"uid": "10000000002527","apply-secret":"base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM=","Content-type":"application/json"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:27 开始进行字符串替换,替换字符串为:{"uid": "10000000002527","apply-secret":"base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM=","Content-type":"application/json"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:35 替换字符串完成，替换后字符串为: {"uid": "10000000002527","apply-secret":"base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM=","Content-type":"application/json"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:83 处理请求后header为: {'uid': '10000000002527', 'apply-secret': 'base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM=', 'Content-type': 'application/json'}
+INFO     pre_handle_utils.py:pre_handle_utils.py:89 处理请求前data为: 
+{"app_uuid": "10000000002527",
+ "cellphone": "0911223344"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:27 开始进行字符串替换,替换字符串为:
+{"app_uuid": "10000000002527",
+ "cellphone": "0911223344"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:35 替换字符串完成，替换后字符串为: 
+{"app_uuid": "10000000002527",
+ "cellphone": "0911223344"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:92 处理后data为: {'app_uuid': '10000000002527', 'cellphone': '0911223344'}
+INFO     pre_handle_utils.py:pre_handle_utils.py:96 处理请求前files: None
+INFO     pre_handle_utils.py:pre_handle_utils.py:122 处理前extract: {"token_type": "$.message.token_type",
+   "access_token": "$.message.access_token"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:125 处理后extract: {'token_type': '$.message.token_type', 'access_token': '$.message.access_token'}
+INFO     pre_handle_utils.py:pre_handle_utils.py:130 处理前validate: {"eq": {
+  "$.code": "200",
+  "$.result": "ok"}}
+INFO     pre_handle_utils.py:pre_handle_utils.py:133 处理后validate: {'eq': {'$.code': '200', '$.result': 'ok'}}
+INFO     data_handle.py:data_handle.py:24 提取响应内容成功,提取表达式为: $.message.token_type, 提取值为: Bearer
+INFO     data_handle.py:data_handle.py:24 提取响应内容成功,提取表达式为: $.message.access_token, 提取值为: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI3IiwianRpIjoiZTI4MDI4YmYwNjg4NjMyM2M1Y2RiYmU3OWNlNDIyODU1NzNlYzIzMjlmZmMwMTQ5MmJiZWM0OTEyMTExOTdjYmE0Mjk5MGQ5Zjg1YmRmY2EiLCJpYXQiOjE2NTg5ODU4MzguMTg3NTExLCJuYmYiOjE2NTg5ODU4MzguMTg3NTE0LCJleHAiOjE2NTg5OTMwMzguMTY2NzE2LCJzdWIiOiI1NSIsInNjb3BlcyI6WyIqIl19.CePdTVUkOVoqEl42ngFwiM_FJMLwVZl44ef4Y-55LyqIqPfZmxS55L6_BUqus8PfKMmSbczDX9MxImGq99Vs5XDsNzJBgwHU8U9fYsF5Nlm-E_XiD5_T7qJIr1yTwH38hgiOOjN7MWtFUM5MNQxcvhcLUEsW_un_IACvFQ4ZKZbnDgq2Re3ItDpZfgGD2BwbTKG5A5ADhewnk1b2PFx7SLB-iNR8eOC_Um4j0qzJcepy0T8cfQOkD_kFEgZOrii2U3gayDZp95EYS36Cxl5MvwjR5eadfJOUGmT2g8K2tB1Sy4YGZtcfDexEaKpqewgboEdSjTrTmZGQwCdrIzqUu3T8PA89djatWugV-e7jy4ntq15qxaOF6_D41LmZttU4isBo6YW-aZYSfrAesr8JvWg_RmL5w8p2Vstf5jUdtz8uK6BV3M_ktCxAWT6M5ACCWzqkKE8BGdZE7tcT4BMRzUoJNE3Mj3NGcfnwfl8kpd5Zvcr3FYxq8PoCDP_Wn-sRFXCMALYGuaJ2zv6h99M-sbQs1AXktBdlULVYIWJOLGleq1P3m757isTzmkLIAWmeOhEIWK0mrUWvzbL0IsiJn8H3JajEY80vHYF9JCgKmcphFV9TGAfdXDlloy2RJV_PG6_FIk5mcvzq2oOueYBlha_MmbbSM77uo3DNjpVFAlg
+INFO     data_handle.py:data_handle.py:24 提取响应内容成功,提取表达式为: $.code, 提取值为: 200
+INFO     assert_util.py:assert_util.py:42 第1断言数据, 实际结果:200, 预期结果: 200, 断言方式：eq

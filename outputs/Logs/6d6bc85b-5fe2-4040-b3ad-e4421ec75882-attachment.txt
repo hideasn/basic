@@ -1,0 +1,18 @@
+INFO     pre_handle_utils.py:pre_handle_utils.py:59 请求前url: api/v1/app/authorization
+INFO     pre_handle_utils.py:pre_handle_utils.py:73 请求后url: https://sns-ttpp.mgthai.com/api/v1/app/authorization
+INFO     pre_handle_utils.py:pre_handle_utils.py:80 处理请求前header为{"uid": "10000000002527",
+ "apply-secret": "base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM="}
+INFO     pre_handle_utils.py:pre_handle_utils.py:27 开始进行字符串替换,替换字符串为:{"uid": "10000000002527",
+ "apply-secret": "base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM="}
+INFO     pre_handle_utils.py:pre_handle_utils.py:35 替换字符串完成，替换后字符串为: {"uid": "10000000002527",
+ "apply-secret": "base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM="}
+INFO     pre_handle_utils.py:pre_handle_utils.py:83 处理请求后header为: {'uid': '10000000002527', 'apply-secret': 'base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM='}
+INFO     pre_handle_utils.py:pre_handle_utils.py:89 处理请求前data为: 
+{"app_uuid": "10000000002527",
+ "cellphone": "0911223344“}
+INFO     pre_handle_utils.py:pre_handle_utils.py:27 开始进行字符串替换,替换字符串为:
+{"app_uuid": "10000000002527",
+ "cellphone": "0911223344“}
+INFO     pre_handle_utils.py:pre_handle_utils.py:35 替换字符串完成，替换后字符串为: 
+{"app_uuid": "10000000002527",
+ "cellphone": "0911223344“}

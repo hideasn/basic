@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Jul 28 15:47:37 CST 2022","Thu Jul 28 15:47:38 CST 2022","854","generate_case","test_demo1","TestDemo1","","","正确密码登录",""

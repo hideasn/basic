@@ -1,0 +1,6 @@
+host: https://store-ttpp.mgthai.com/
+
+
+# 1:读取excel用例, 2:读取yaml用例, 0:yaml和excel同时读取
+case_type: 1
+

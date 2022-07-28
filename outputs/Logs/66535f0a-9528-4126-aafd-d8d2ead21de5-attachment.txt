@@ -1,0 +1,43 @@
+INFO     pre_handle_utils.py:pre_handle_utils.py:59 请求前url: api/v1/app/authorization
+INFO     pre_handle_utils.py:pre_handle_utils.py:73 请求后url: https://sns-ttpp.mgthai.com/api/v1/app/authorization
+INFO     pre_handle_utils.py:pre_handle_utils.py:80 处理请求前header为{"uid": "10000000002527","apply-secret":"base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM=","Content-type":"application/json"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:27 开始进行字符串替换,替换字符串为:{"uid": "10000000002527","apply-secret":"base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM=","Content-type":"application/json"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:35 替换字符串完成，替换后字符串为: {"uid": "10000000002527","apply-secret":"base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM=","Content-type":"application/json"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:83 处理请求后header为: {'uid': '10000000002527', 'apply-secret': 'base64:szoJ3mSx/5U7zOsJfU7s4pSahiwdh01x6badmz5FtCM=', 'Content-type': 'application/json'}
+INFO     pre_handle_utils.py:pre_handle_utils.py:89 处理请求前data为: 
+{"app_uuid": "10000000002527",
+ "cellphone": "0911223344"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:27 开始进行字符串替换,替换字符串为:
+{"app_uuid": "10000000002527",
+ "cellphone": "0911223344"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:35 替换字符串完成，替换后字符串为: 
+{"app_uuid": "10000000002527",
+ "cellphone": "0911223344"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:92 处理后data为: {'app_uuid': '10000000002527', 'cellphone': '0911223344'}
+INFO     pre_handle_utils.py:pre_handle_utils.py:96 处理请求前files: None
+INFO     pre_handle_utils.py:pre_handle_utils.py:122 处理前extract: {"token_type": "$.message.token_type",
+   "access_token": "$.message.access_token"}
+INFO     pre_handle_utils.py:pre_handle_utils.py:125 处理后extract: {'token_type': '$.message.token_type', 'access_token': '$.message.access_token'}
+INFO     pre_handle_utils.py:pre_handle_utils.py:130 处理前validate: {"eq": {
+  "$.code": "200",
+  "$.result": "ok"}}
+INFO     pre_handle_utils.py:pre_handle_utils.py:133 处理后validate: {'eq': {'$.code': '200', '$.result': 'ok'}}
+ERROR    data_handle.py:data_handle.py:26 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\HideAsn\workspace\basic\common_utils\data_handle.py", line 23, in json_extract
+    result = jsonpath(response, expr)[0]
+TypeError: 'bool' object is not subscriptable
+INFO     data_handle.py:data_handle.py:27 未提取到内容,请检查表达式是否错误,提取表达式为: $.message.token_type
+ERROR    data_handle.py:data_handle.py:26 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\HideAsn\workspace\basic\common_utils\data_handle.py", line 23, in json_extract
+    result = jsonpath(response, expr)[0]
+TypeError: 'bool' object is not subscriptable
+INFO     data_handle.py:data_handle.py:27 未提取到内容,请检查表达式是否错误,提取表达式为: $.message.access_token
+ERROR    data_handle.py:data_handle.py:26 'bool' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\HideAsn\workspace\basic\common_utils\data_handle.py", line 23, in json_extract
+    result = jsonpath(response, expr)[0]
+TypeError: 'bool' object is not subscriptable
+INFO     data_handle.py:data_handle.py:27 未提取到内容,请检查表达式是否错误,提取表达式为: $.code
+INFO     assert_util.py:assert_util.py:42 第1断言数据, 实际结果:None, 预期结果: 200, 断言方式：eq
