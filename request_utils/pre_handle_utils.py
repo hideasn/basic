@@ -16,6 +16,7 @@ from common_utils.excel_handle import ExcelHandle
 from string import Template
 from common_utils.global_vars import GLOBAL_VARS
 from common_utils.exec_default_func import eval_func
+from common_utils.allure_step import allure_step
 logger = get_logger(os.path.basename(__file__))
 
 
@@ -35,6 +36,7 @@ def pre_expr_handle(content):      # content: {"session-token":"$token"}
         logger.info(f"替换字符串完成，替换后字符串为: {content}")
 
     return content
+
 
 # '{"session-token":"$token"}' => {"session-token":"$token"}
 def str_to_python(content):
@@ -69,12 +71,13 @@ class RequestPreDataHandle:
                 else:
                     self.host.endswith("/") and url.starstwith("/")
                     url = self.host.strip("/") + url
-
+            allure_step('请求地址', self.request_data["url"])
             logger.info(f"请求后url: {url}")
 
         self.request_data["url"] = url
 
     def _header_handle(self):
+        allure_step('请求头', self.request_data.get("header", None))
         header = self.request_data.get("header")
         if header:
             logger.info(f"处理请求前header为{header}")
@@ -84,6 +87,7 @@ class RequestPreDataHandle:
 
     # 处理请求数据
     def _data_handle(self):
+        allure_step('请求data', self.request_data.get("data", None))
         data = self.request_data.get("data")
         if data:
             logger.info(f"处理请求前data为: {data}")
@@ -93,6 +97,7 @@ class RequestPreDataHandle:
 
     def _file_handle(self):
         files = self.request_data.get("file")
+        allure_step('请求files', files)
         logger.info(f"处理请求前files: {files}")
 
         if files is None:
@@ -117,6 +122,7 @@ class RequestPreDataHandle:
         logger.info(f"处理后file为: {files}")
 
     def _extract_handle(self):
+        allure_step('请求后置提取参数', self.request_data.get("extract", None))
         extract = self.request_data.get("extract")
         if extract:
             logger.info(f"处理前extract: {extract}")
@@ -125,6 +131,7 @@ class RequestPreDataHandle:
             logger.info(f"处理后extract: {extract}")
 
     def _validate_handle(self):
+        allure_step('请求预期结果', self.request_data.get("validate", None))
         validate = self.request_data.get("validate")
         if validate:
             logger.info(f"处理前validate: {validate}")

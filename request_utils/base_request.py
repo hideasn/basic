@@ -10,6 +10,7 @@
 import requests
 from request_utils.pre_handle_utils import RequestPreDataHandle
 from request_utils.after_handle_utils import after_extract
+from common_utils.allure_step import allure_step
 
 
 class BaseRequest:
@@ -34,6 +35,7 @@ class BaseRequest:
                 header=request_data.get("header"),
                 file=request_data.get("file")
             )
+        allure_step("请求响应数据", response.text)
         after_extract(response, request_data.get("extract", None))
         return response
 

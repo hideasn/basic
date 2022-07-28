@@ -26,8 +26,6 @@ class TestLogin:
     @pytest.mark.parametrize("data", ExcelHandle(data_path + "test_demo1.xlsx").read_excel())
     def test_login(self, data):
         allure_title("正常登录")
-        print(data)
-        print('sssss')
         # data = {
         #     "title": "正常登录",
         #     "url": "bank/api/login",
