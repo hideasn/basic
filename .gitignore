@@ -211,4 +211,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-basic/outputs/Logs/interface_log
+basic/outputs/Logs/interface_log!/outputs/reports/
+!/outputs/Logs/interface_log/
