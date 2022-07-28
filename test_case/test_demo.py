@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 
-"""
-# @Time　 : 2021/12/29 21:12
-# @Author : king
-# @File　 : test_demo.py
-# @project: ApiPytestFramework
-# @QQ     : 772084279
-# @Email  : 772084279@qq.com
-# @blog   : https://ceshizhilu.blog.csdn.net/
-"""
+# @version: v1.0
+# @author : Hide
+# @Project : basic
+# @File : base_request.py
+# @Software: PyCharm
+# @time: 2022/7/20 15:21
+# @description :
 import allure
 import pytest
 
